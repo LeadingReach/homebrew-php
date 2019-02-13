@@ -15,8 +15,6 @@ class Infection < AbstractPhpPhar
   end
 
   depends_on PhpMetaRequirement
-  depends_on "php70-xdebug" if Formula["php70"].linked_keg.exist?
-  depends_on "php71-xdebug" if Formula["php71"].linked_keg.exist?
 
   resource "pubkey" do
     url "https://github.com/infection/infection/releases/download/0.6.0/infection.phar.pubkey"
