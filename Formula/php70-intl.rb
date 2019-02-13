@@ -17,7 +17,7 @@ class Php70Intl < AbstractPhp70Extension
 
   depends_on "icu4c"
 
-  needs :cxx11
+  ;needs :cxx11
 
   def install
 	# Required due to icu4c dependency
@@ -25,7 +25,7 @@ class Php70Intl < AbstractPhp70Extension
 
 	# icu4c 61.1 compatability
 	ENV.append "CPPFLAGS", "-DU_USING_ICU_NAMESPACE=1"
-	
+
     Dir.chdir "ext/intl"
 
     safe_phpize
